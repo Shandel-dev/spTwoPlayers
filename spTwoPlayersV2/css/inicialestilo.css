@@ -1,0 +1,671 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080c1f;
+}
+.titulo{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100%;
+    height: 7vh;
+    background-color: #0d1230;
+}
+.titulo h1{
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 230%;
+}
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    background-color: #9bc231;/*#CADB3B;*/
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.pesquisa{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa img{
+    height: 90%;
+}
+.pesquisa div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 50%;
+    height: 55%;
+    border-radius: 1rem;
+}
+.pesquisa div input{
+    font-family: "Opensans", sans-serif;
+    border: none;
+    width: 70%;
+    margin-left: 5%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pesquisa div input[type="text"]:focus {
+    border: none; /* Define a cor e espessura da borda quando o campo estiver em foco */
+    outline: none; /* Remove o contorno padrão do campo */
+}
+
+.pesquisa div i{
+    color: #21193C;
+}
+
+.links{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    text-decoration: none;
+    color: #182C3C;
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+}
+.paralogin{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.paralogin ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+.paralogin ul li{
+    margin-left: 10%;
+}
+.paralogin ul li a{
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 120%;
+}
+
+
+
+
+
+.apresentation{/*configuração dos slides*/
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    width: 400%;
+    height: 100%;
+    border-bottom: 2px solid #CADB3B;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+#slide1{
+    background-image: url(https://sm.ign.com/ign_br/screenshot/default/minecraft_j8gc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#slideContent1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: end;
+    padding: 10% 0 5%;
+    padding-right: 55%;
+    background: linear-gradient(90deg, rgba(0, 20, 36, 0.8) 40%, rgba(9,9,121,0) 100%);
+    width: 100%;
+    height: 100%;
+    color: #e9ffed;
+    font-family: "Open sans", sans-serif;
+}
+#slideContent1 h4{
+    padding: 0 5% 0;
+    background-color: #FFC42C;
+    color: #20183C;
+}
+#slideContent1 h2{
+    font-weight: 200;
+}
+
+#botoes1{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 20%;
+}
+#botoes1 div{
+    display: flex;
+    width: 40%;
+    height: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#botoes1 div:first-child{
+    background-color: #CADB3B;
+    color: #CADB3B;
+}
+#botoes1 div:last-child{
+    background-color: #FFC42C;
+    color: #FFC42C;
+}
+#botoes1 div a{
+    color: #0f0422;
+    font-family: "open sans";
+    font-size: 100%;
+    font-weight: 700;
+}
+#botoes1 div:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+
+}
+
+#slide2{
+    background-image: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000038676/02b078ec6e65f597dc655c1b958bf2dd07961ea45db4d59688ca8746bf28ae6d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+}
+#slide3{
+    background-image: url(https://cdn2.unrealengine.com/fortnite-na-central-server-region-3-1920x1080-8e53d35d7d26.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 8%;
+}
+#slide4{
+    background-image: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.manual-navigation{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -5vh;
+}
+.manual-btn{    /*referente aos labels*/
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+.manual-btn:hover{
+    background-color: #000000;
+    border: 2px solid #000000;
+    transition: 0.5s;
+}
+#radio1:checked~.first{
+    margin-left: 0;
+    transition: 0.5s;
+}
+#radio2:checked~.first{
+    margin-left: -25%;
+    transition: 0.5s;
+}
+#radio3:checked~.first{
+    margin-left: -50%;
+    transition: 0.5s;
+}
+#radio4:checked~.first{
+    margin-left: -75%;
+    transition: 0.5s;
+}
+
+.ativo{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60vh;
+}
+.ativo div{
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+    background-color: #e9ffed;
+    border: 2px solid rgb(255, 255, 255);
+}
+.ativo div:not(:last-child){
+    margin-right: 10px;
+}
+
+/*caso checked background indicando o slide ativo*/
+#radio1:checked~.ativo .auto-btn1{
+    background-color: #000000;
+}
+#radio2:checked~.ativo .auto-btn2{
+    background-color: #000000;
+}
+#radio3:checked~.ativo .auto-btn3{
+    background-color: #000000;
+}
+#radio4:checked~.ativo .auto-btn4{
+    background-color: #000000;
+}
+
+
+
+
+
+
+
+
+/*FIM DA APRESENTAÇÃO DE SLIDES*/
+.section{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    height: 23vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.section div i{
+    font-size: 350%;
+    color: #CADB3B;
+    transition: 0.5s;
+    margin-bottom: 10%;
+}
+.section h3{
+    color: #CADB3B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+    text-decoration: none;
+}
+.section div:hover h3{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;/*tamanho do sublinhado*/
+}
+.section div:hover i{
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.plataformas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+    height: 60vh;
+}
+
+.grade{
+    height: 90%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 49%;
+    grid-gap: .5rem;
+    grid-template-areas:
+        "playstation playstation playstation computer"
+        "nintendo    xbox        xbox        computer"  
+    ;
+}
+
+.plataformas h1{
+    width: 80%;
+    color: white;
+    font-family: "MuseoModerno", sans-serif;
+    text-align: start;
+}
+#playstation{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    grid-area: playstation;
+    cursor: pointer;
+}
+#playstation img{
+    transition: 0.3s;
+    width: 100%;
+    margin: auto 0;
+}
+#playstation img:hover{
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+
+#nintendo{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    grid-area: nintendo;
+    cursor: pointer;
+}
+#nintendo img{
+    width: 100%;
+    transition: 0.3s;
+}
+#nintendo img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#xbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    grid-area: xbox;
+    cursor: pointer;
+}
+#xbox img{
+    margin: auto auto;
+    width: 100%;
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+#xbox a img:hover{
+    transition: 0.3s;
+    transform: scale(1.55);
+}
+#computer{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: #FFC42C;
+    grid-area: computer;
+    cursor: pointer;
+}
+
+#computer img{
+    margin: auto auto;
+    height: 100%;
+    transition: 0.3s;
+}
+#computer img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.categorias{
+    display: flex;
+    height: 65vh;
+    width: 100%;
+    margin-bottom: 3%;
+    background-image: url(https://wallpapercave.com/wp/wp5132020.jpg);
+    background-size: cover;
+    border-bottom: 2px solid #CADB3B;
+}
+.cateGradiente{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(0, 20, 36) 40%, rgba(9,9,121,0) 100%);
+}
+
+.cateGradiente div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+.cateGradiente h2, h3{
+    text-align: center;
+    color: #e9ffed;
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 180%;
+}
+.content{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+.content a{
+    text-decoration: none;
+    font-family: "museomoderno";
+    font-size: 150%;
+    color: #CADB3B;
+    transition: 0.5s;
+}
+.content i{
+    color: #00C891;
+}
+.content a:hover{
+    transform: translateY(2px);
+    transition: 0.5s;
+}
+
+
+.premiado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    padding: 0 5% 0;
+}
+.premiado h1{
+    text-align: center;
+    color: white;
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 250%;
+    font-weight: 700;
+}
+.gridPremios{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: 30%;
+    grid-gap: .7rem;
+    grid-template-areas: 
+        "gta gta elderRing elderRing cupHead"
+        "gta gta theLast godOfWar godOfWar"
+        "resident resident theLast godOfWar godOfWar"
+    ;
+    
+}
+.gamePremiado{
+    border-radius: 1rem;
+    cursor: pointer;
+}
+#gta5{
+    background-image: url(https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177700809/poster-grand-theft-auto-v-gta-5-b-5ceeda64.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    grid-area: gta;
+}
+#residentEvil{
+    background-image: url(../inicialImg/residentCapa.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: resident;
+}
+#elderRing{
+    background-image: url(../inicialImg/elderRingCapa.jpg);
+    background-size: cover;
+    background-position: center 47%;
+    background-repeat: no-repeat;
+    grid-area: elderRing;
+}
+#cupHead{
+    background-image: url(../inicialImg/cupHeadCapa.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: cupHead;
+}
+#theLast{
+    background-image: url(../inicialImg/theLastCapa.jpg);
+    background-size: cover;
+    background-position: center -10% ;
+    background-repeat: no-repeat;
+    grid-area: theLast;
+}
+#godOfWar{
+    background-image:url(../inicialImg/godOfWar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: godOfWar;
+}
+
+.glass{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 1rem;
+    transition: 1s;
+}
+.glass h2{
+    color: #e9ffed00;
+}
+.glass:hover{
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.548);
+    border: 5px solid #cbdb3b80;
+}
+.glass:hover h2{
+    color: #e9ffed;
+    transition: 0.5s;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    flex-direction: column;
+}
+#rodapeInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bc231;
+    width: 100%;
+    height: 80%;
+    padding: 0 5% 0;
+}
+
+#rodapeInfo img{
+    height: 80%;
+}
+#textLinks{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    align-items: start;
+    justify-content: space-evenly;
+}
+#textLinks h3, p, a{
+    color: #0f0422;
+    font-family: "Open Sans", sans-serif;
+    font-size: 85%;
+    text-decoration: none;
+}
+#social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 10%;
+}
+#social div:first-child{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+#social img{
+    height: 50%;
+    filter: grayscale(100%);
+}
+
+#social i{
+    font-size: 200%;
+}
+#social div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+    border-radius: 2rem;
+    background-color: #0d1230;
+}
+#social div:last-child a h3{
+    color: white;
+    font-family: "Open sans", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1230;
+    width: 100%;
+    height: 20%;
+}
+#copyright h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    color: #e9ffed;
+}

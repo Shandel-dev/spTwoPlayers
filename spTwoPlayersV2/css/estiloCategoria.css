@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080c1f;
+}
+.titulo{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100%;
+    height: 7vh;
+    background-color: #0d1230;
+}
+.titulo h1{
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 230%;
+}
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    background-color: #9bc231;/*#CADB3B;*/
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.pesquisa{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa img{
+    height: 90%;
+}
+.pesquisa div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ffed;
+    width: 50%;
+    height: 55%;
+    border-radius: 1rem;
+}
+.pesquisa div input{
+    font-family: "Opensans", sans-serif;
+    border: none;
+    width: 70%;
+    margin-left: 5%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pesquisa div input[type="text"]:focus {
+    border: none; /* Define a cor e espessura da borda quando o campo estiver em foco */
+    outline: none; /* Remove o contorno padrão do campo */
+}
+
+.pesquisa div i{
+    color: #000000;
+}
+
+.links{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    text-decoration: none;
+    color: #182C3C;
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+}
+.paralogin{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.paralogin ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+.paralogin ul li{
+    margin-left: 10%;
+}
+.paralogin ul li a{
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 120%;
+}
+
+
+.plataformas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+.plataformas input{
+    display: none;
+}
+.custom-radio{      /*barra de navegação de plataformas*/
+    position: sticky;
+    top: 6vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: saturate(100%) blur(20px);
+    z-index: 2;
+}
+
+.custom-radio label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 10%;
+    height: 60%;
+    font-family: "museomoderno", sans-serif;
+    font-size: 80%;
+    font-weight: 600;
+    transition: 0.3s;
+    backdrop-filter: saturate(100%) blur(20px);
+
+}
+.custom-radio #radio1cat{   /*botões das categorias*/
+    border: 3px solid #1980ff;
+    color: rgb(255, 255, 255);
+}
+.custom-radio #radio2cat{
+    border: 3px solid #0fc70c;
+    color: #ffffff;
+}
+.custom-radio #radio3cat{
+    border: 3px solid red;
+    color: rgb(255, 255, 255);
+}
+.custom-radio #radio4cat{
+    border: 3px solid #b0db3b;
+    color: #ffffff;
+}
+.custom-radio #radio5cat{
+    border: 3px solid #cfc314;
+    color: #ffffff;
+}
+
+#radio1:checked ~.custom-radio #radio1cat{
+    background-color: #0f50a0d3;
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: white;
+}
+#radio2:checked ~.custom-radio #radio2cat{
+    background-color: rgba(0, 128, 0, 0.795);
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: white;
+}
+#radio3:checked ~.custom-radio #radio3cat{
+    background-color: rgba(255, 0, 0, 0.795);
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: white;
+}
+#radio4:checked ~.custom-radio #radio4cat{
+    background-color: #b0db3bc9;
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+#radio5:checked ~.custom-radio #radio5cat{
+    background-color: #cfc314c5;
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.custom-radio input[type="radio"]:checked + label {
+    background-color: blue;
+}
+.container-slides{ /*CONTEUDO De uma plataforma*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide{ /* referente ao conteudo de cada plataforma*/
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.slide .banner{         /*banner confi. padrão*/
+    background-color: white;
+    width: 100%;
+    height: 55vh;
+}
+.slide .msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 30%;
+    width: 100%;
+    height: 30vh;
+    color: white;
+    font-family: "MuseoModerno", sans-serif;
+}
+.slide .msg h2{
+    font-size: 80%;
+    font-weight: 400;
+}
+.slide .categorias{     /*elemento pai de todas as cetegorias e seus elementos*/
+    height: 400vh;
+    width: 100%;
+    background-color: black;
+}
+.slide .categorias>div{     /*Uma categoria e a config. de seu BANNER*/
+    display: flex;
+    scroll-snap-align: start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+    background-size: cover;
+    background-position: center;
+}
+.slide .categorias>div .gradiente{      /*gradiente*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 20%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.822) 50%, rgba(0, 0, 0, 0) 100%);
+    background-size: cover;
+}
+.slide .categorias h1, h3{
+    font-size: -10%;
+    text-align: center;
+    font-family: "open sans";
+    color: white;
+    font-weight: 600;
+}
+.containerGames{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    padding: 0 10%  ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.game{          /*config. padrão das div jogos*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 85%;
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    color: white;
+    border-radius: 1rem 1rem 0 0;
+    font-family: "Open sans", sans-serif;
+}
+
+.containerGames .game img{
+    width: 100%;
+    height: 50%;
+    transition: ease-out 0.5s;
+}
+.containerGames .game:hover img{
+    transform: translateY(-5%);
+    transition: ease-out 0.5s;
+}
+.containerGames .game .gameInfo{      /*div com as informações do jogo*/
+    text-align: start;
+    height: 50%;
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerGames .game a{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+}
+.containerGames .game button{
+    border: none;
+    background-color: #b0db3b;
+    width: 60%;
+    height: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.containerGames .game button p{
+    font-family: "museo moderno", sans-serif;
+    font-size: 90%;
+}
+
+#playstation .banner{       /*banner da plataforma*/
+    background-image: url(https://meialua.net/wp-content/uploads/2022/04/ps-studios-banner-hero-desktop-01-en-15feb22-1920x717.png);
+    background-size: cover;
+    background-position: center 10%;
+    border-bottom: 2px solid blue;
+}
+
+#xbox .banner{
+    background-image: url(https://pbs.twimg.com/media/FIgoeNRVkAM3Y6M.jpg:large);
+    background-size: cover;
+    background-position: center top;
+    border-bottom: 2px solid #b0f001;
+
+}
+
+#nintendo .banner{
+    background-image: url(https://switchplayer.net/wp-content/uploads/2017/03/Nintendo-Switch-List-Banner-1.png);
+    background-size: cover;
+    background-position: center top;
+    border-bottom: 2px solid red;
+
+
+}
+
+#pc .banner{
+    background-image: url(https://xxboxnews.blob.core.windows.net/prod/sites/8/2021/11/EAP_HERO.jpg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #b0db3b;
+}
+
+#radio1:checked ~.container-slides .slides .first {
+    margin-left: 0;
+    transition: 0.1s;
+}
+
+#radio2:checked ~.container-slides .slides .first {
+    margin-left: -20%;
+    transition: 0.1s;
+}
+
+#radio3:checked ~.container-slides .slides .first {
+margin-left: -40%;
+    transition: 0.1s;
+}
+
+#radio4:checked ~ .container-slides .slides .first {
+    margin-left: -60%;
+    transition: 0.1s;
+}
+
+#radio5:checked ~ .container-slides .slides .first {
+    margin-left: -80%;
+    transition: 0.1s;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    flex-direction: column;
+}
+#rodapeInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bc231;
+    width: 100%;
+    height: 80%;
+    padding: 0 5% 0;
+}
+
+#rodapeInfo img{
+    height: 80%;
+}
+#textLinks{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    align-items: start;
+    justify-content: space-evenly;
+}
+#textLinks h3, p, a{
+    color: #0f0422;
+    font-family: "Open Sans", sans-serif;
+    font-size: 85%;
+    text-decoration: none;
+}
+#social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 10%;
+}
+#social div:first-child{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+#social img{
+    height: 50%;
+    filter: grayscale(100%);
+}
+#social i{
+    font-size: 180%;
+}
+#social div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+    border-radius: 2rem;
+    background-color: #0d1230;
+}
+#social div:last-child h3{
+    color: white;
+    font-family: "Open sans", sans-serif;
+    font-weight: 500;
+    font-size: 90%;
+}
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1230;
+    width: 100%;
+    height: 20%;
+}
+#copyright h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    color: #e9ffed;
+}

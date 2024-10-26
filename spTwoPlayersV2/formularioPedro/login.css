@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080c1f;
+}
+
+.titulo{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100%;
+    height: 7vh;
+    background-color: #0d1230;
+}
+.titulo h1{
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 230%;
+}
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    background-color: #9bc231;/*#CADB3B;*/
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.pesquisa{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa img{
+    height: 90%;
+}
+.pesquisa div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ffed;
+    width: 50%;
+    height: 55%;
+    border-radius: 1rem;
+}
+.pesquisa div input{
+    font-family: "Open sans", sans-serif;
+    border: none;
+    width: 70%;
+    margin-left: 5%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pesquisa div input[type="text"]:focus {
+    border: none; /* Define a cor e espessura da borda quando o campo estiver em foco */
+    outline: none; /* Remove o contorno padrão do campo */
+}
+
+.pesquisa div i{
+    color: #000000;
+}
+
+.links{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    text-decoration: none;
+    color: #182C3C;
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+}
+.paralogin{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.paralogin ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+.paralogin ul li{
+    margin-left: 10%;
+}
+.paralogin ul li a{
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 120%;
+}
+
+
+.cadastroCliente { 
+    
+    width:300px; 
+    margin:auto;
+    overflow:hidden;
+    background:#ffffff; 
+    font-family:'open_sanslight'; 
+    border-radius:5px;  
+    padding:10px 20px 20px 20px; 
+    position:relative; 
+    padding-bottom:80px; 
+    box-shadow:0px 1px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.cadastroCliente .title { 
+
+    font-family:'museomoderno'; 
+    color:#9bc231; 
+    font-size:1.2em;
+    text-align:center; 
+    font-weight:bold; 
+    margin:10px 0 30px 0; 
+    border-bottom:1px solid #eee; 
+    padding-bottom:20px; 
+
+}
+
+
+.cadastroCliente input { 
+
+    font-family:'open_sanslight'; 
+    font-size:1em; 
+    display:block; 
+    padding:15px 10px; 
+    margin-bottom: 10px; 
+    width:100%; 
+    border:1px solid #ddd; 
+    transition: border-width 0.2s ease; 
+    border-radius:50px; 
+    color:#ccc; 
+
+}
+
+.dadosCLiente{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#plataform{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+
+
+.cadastroCliente input:focus { 
+
+    outline: none; 
+    color:#9bc231; 
+    border-color: #9bc231; 
+    border-left-width:45px; 
+}
+.login input:focus + i.icon { 
+
+    opacity:1; 
+    left:35px; 
+    transition: all 0.25s ease-out;
+}
+
+.cadastroCliente button { 
+
+    width:100%; 
+    height:100%; 
+    padding:10px 10px; 
+    background: #9bc231; 
+    color: #fff; 
+    font-size:1.5em; 
+    display: block; 
+    border:none; 
+    cursor:pointer; 
+    margin-top:20px; 
+    position: absolute; 
+    left:0; 
+    bottom:0; 
+    max-height:60px; 
+    border:0px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 0 0 2px 2px; transform: rotateZ(0deg); 
+    transition: all 0.1s ease-out; 
+    border-bottom-width: 7px; 
+}
+a{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.login button:active { background-color:#4c4c4c; color:#ffffff; }
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    flex-direction: column;
+}
+#rodapeInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bc231;
+    width: 100%;
+    height: 80%;
+    padding: 0 5% 0;
+}
+
+#rodapeInfo img{
+    height: 80%;
+}
+#textLinks{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    align-items: start;
+    justify-content: space-evenly;
+}
+#textLinks h3, p, a{
+    color: #0f0422;
+    font-family: "Open Sans", sans-serif;
+    font-size: 85%;
+    text-decoration: none;
+}
+#social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 10%;
+}
+#social div:first-child{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+#social img{
+    height: 50%;
+    filter: grayscale(100%);
+}
+
+#social i{
+    font-size: 200%;
+}
+#social div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+    border-radius: 2rem;
+    background-color: #0d1230;
+}
+#social div:last-child a h3{
+    color: white;
+    font-family: "Open sans", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1230;
+    width: 100%;
+    height: 20%;
+}
+#copyright h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    color: #e9ffed;
+}

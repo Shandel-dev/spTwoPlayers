@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080c1f;
+}
+.titulo{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100%;
+    height: 7vh;
+    background-color: #0d1230;
+}
+.titulo h1{
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 230%;
+}
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    background-color: #9bc231;/*#CADB3B;*/
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.pesquisa{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisa img{
+    height: 90%;
+}
+.pesquisa div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ffed;
+    width: 50%;
+    height: 55%;
+    border-radius: 1rem;
+}
+.pesquisa div input{
+    font-family: "Opensans", sans-serif;
+    border: none;
+    width: 70%;
+    margin-left: 5%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pesquisa div input[type="search"]:focus {
+    border: none; /* Define a cor e espessura da borda quando o campo estiver em foco */
+    outline: none; /* Remove o contorno padrão do campo */
+}
+
+.pesquisa div i{
+    color: #000000;
+}
+
+.links{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    text-decoration: none;
+    color: #182C3C;
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+}
+.paralogin{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.paralogin ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+}
+.paralogin ul li{
+    margin-left: 10%;
+}
+.paralogin ul li a{
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 120%;
+}
+
+
+
+
+.container-gameInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid #9bc231bd;
+}
+.container-gameInfo img.background{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*centralização do background*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    filter: blur(20px) brightness(50%);
+}
+
+.gameInfo{
+    display: flex;
+    position: relative;
+    height: 70%;
+    width: 100%;
+    padding: 1%;
+    z-index: 1;
+}
+.gameInfo>img{
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra à imagem */
+}
+.gameInfo .nomeJogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1% 1% 13%;
+    color: #e9ffed;
+    font-family: "Comfortaa",sans-serif;
+}
+.nomeJogo i{
+    color: #c3ec4f;
+}
+.nomeJogo h1{
+    font-size: 3rem;
+    font-weight: 200;
+}
+.nomeJogo h2{
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+.nomeJogo h3{
+    font-size: 1.5rem;
+    font-weight: 50;
+}
+.nomeJogo h5{
+    font-size: 1rem;
+    font-weight: 50;
+    line-height: 30px;
+}
+
+
+
+.container-compra{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    height: 30%;
+    padding: 2% 15% 2% 2%;
+}
+.escolhaVersao{
+    display: flex;
+    flex-direction: column;
+}
+.escolhaVersao label{
+    font-size: 1.25rem;
+    color: #e9ffed;
+    font-family: "comfortaa";
+    margin-bottom: 1%;
+}
+
+.escolhaVersao select{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    text-align: center;
+    width: 300px;
+    height: 3rem;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.671);
+}
+.escolhaVersao option{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(110, 110, 110);
+}
+.compraOpcoes{
+    display: flex;
+    margin-left: -10%;
+    justify-content: space-between;
+    width: 37%;
+}
+
+.comprar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "comfortaa";
+    width: 210px;
+    height: 3rem;
+    background-color: #9bc231;
+}
+.premium{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "comfortaa";
+    font-size: 1.1rem;
+    width: 200px;
+    height: 3rem;
+    background-color: #dcec4f;
+}
+.disponivel{
+    display: flex;
+    width: 200px;
+    height: 3rem;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+.disponivel h3{
+    font-family: "Comfortaa";
+}
+.disponivel div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.disponivel div i{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+
+.content-descricao{
+    padding: 2%;
+}
+.classificacao{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    height: 35vh;
+}
+.classificacao img{
+    height: 90%;
+}
+.classificacao div{
+    display: flex;
+    height: 100%;
+    width: 40%;
+    padding: 2%;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    font-family: "Open sans";
+}
+
+.classificacao div img{
+    height: 1.5rem;
+}
+
+.descricao{
+    display: flex;
+    width: 100%;
+    color: white;
+    font-family: "open sans";
+}
+.descricao div:first-child{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    text-align: start;
+}
+.descricao div:first-child h3{
+    font-weight: 200;
+}
+.descricao div:last-child{
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    width: 50%;
+}
+.descricao div:last-child h3{
+    font-weight: 200;
+}
+
+
+
+
+.container-galeria{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 98%;
+    margin: 20px auto;
+}
+.text{
+    display: flex;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+.text h1{
+    color: white;
+    font-family: "confortaa", sans-serif;
+    font-weight: 100;
+    font-size: 3rem;
+}
+.slides-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    height: 85%;
+    width: 100%;
+    gap: 4px;
+}
+
+.slides-galeria>div{/*.slide*/
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: ease 1s;
+    width: 20%;
+    height: 100%;
+    border-bottom: 2px solid #e9ffed;
+}
+.slides-galeria>div:hover{
+    border-bottom: 2px solid rgb(172, 255, 47);
+    width: 40%;
+    transition: ease-out 1s;
+}
+.slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.slides-galeria .slide .info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    padding: 25% 1% 5%;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0) 80%);
+    color: #e9ffed;
+    font-family: "confortaa", sans-serif;
+    font-size: 0.75rem;
+    transition: ease-in-out 1s;
+}
+.info h3{
+    font-weight: 400;
+}
+.slides-galeria>div:hover .info{
+    transition: ease-in-out 1s;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    flex-direction: column;
+}
+#rodapeInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bc231;
+    width: 100%;
+    height: 80%;
+    padding: 0 5% 0;
+}
+
+#rodapeInfo img{
+    height: 80%;
+}
+#textLinks{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    align-items: start;
+    justify-content: space-evenly;
+}
+#textLinks h3, p, a{
+    color: #0f0422;
+    font-family: "Open Sans", sans-serif;
+    font-size: 85%;
+    text-decoration: none;
+}
+#social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 10%;
+}
+#social div:first-child{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+#social img{
+    height: 50%;
+    filter: grayscale(100%);
+}
+
+#social i{
+    font-size: 200%;
+}
+#social div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 25%;
+    border-radius: 2rem;
+    background-color: #0d1230;
+}
+#social div:last-child a h3{
+    color: white;
+    font-family: "Open sans", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1230;
+    width: 100%;
+    height: 20%;
+}
+#copyright h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    color: #e9ffed;
+}
